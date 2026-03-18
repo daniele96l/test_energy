@@ -522,7 +522,7 @@ function WhatIfExplorer({ gridSamples, bestS, bestW, bestB }: { gridSamples: Gri
   };
 
   return (
-    <div className="card" style={{padding:"22px 24px"}}>
+    <div className="card" style={{padding:"22px 24px", height:"100%", overflow:"auto"}}>
       <div style={{marginBottom:16}}>
         <div className="opt-eyebrow">🎛 What-If Explorer</div>
         <div style={{fontSize:13,color:"var(--text-secondary)",marginTop:4}}>
@@ -1026,7 +1026,7 @@ function OptimizationPanel() {
 
       {/* What-if explorer */}
       {result?.gridSamples?.length&&(
-        <div style={{display:"flex",gap:16,alignItems:"flex-start",width:"100%",minWidth:0}}>
+        <div style={{display:"flex",gap:16,alignItems:"stretch",width:"100%",minWidth:0}}>
           <div style={{flex:"1 1 0",minWidth:0}}>
             <WhatIfExplorer
               gridSamples={result.gridSamples}

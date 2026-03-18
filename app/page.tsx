@@ -817,6 +817,10 @@ export default function Page() {
               <div className="controls-spacer"/>
               <span className="points-badge">{ptCount}</span>
             </div>
+            <div style={{marginTop:10,fontSize:12,color:"var(--text-secondary)",lineHeight:1.45}}>
+              This is just a quick exploratory <span style={{fontWeight:600}}>analisi</span> to visualize the data we have and understand its shape.
+              Use the sliders to scale solar/wind up and down and see how the curves change. The next tab runs the optimization requested in the task.
+            </div>
 
             <div style={{display:"flex",gap:20,flexWrap:"wrap"}}>
               <div style={{flex:"3 1 520px",display:"flex",flexDirection:"column",gap:16}}>

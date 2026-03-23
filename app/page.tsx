@@ -1015,7 +1015,7 @@ function OptimizationPanel() {
       {best&&<>
         <div className="section-eyebrow">🏆 Best Result</div>
         <div className="stats-grid">
-          {[{label:"Solar Capacity",value:`${best.s.toFixed(1)} MW`,icon:"☀️"},{label:"Wind Capacity",value:`${best.w.toFixed(1)} MW`,icon:"🌬️"},{label:"Baseload",value:`${best.b.toFixed(1)} MW`,icon:"⚡"}].map(item=>(
+          {[{label:"Solar Multiplier",value:`${best.s.toFixed(1)}×`,icon:"☀️"},{label:"Wind Multiplier",value:`${best.w.toFixed(1)}×`,icon:"🌬️"},{label:"Baseload",value:`${best.b.toFixed(1)} MW`,icon:"⚡"}].map(item=>(
             <div key={item.label} className="result-card">
               <div className="result-label">{item.icon} {item.label}</div>
               <div className="result-value">{item.value}</div>
@@ -1337,8 +1337,8 @@ function BatteryOptimizationPanel() {
         <div className="section-eyebrow">🏆 Optimized Mix + Storage Impact</div>
         <div className="stats-grid">
           {[
-            {label:"Solar Capacity",value:`${best.s.toFixed(1)} MW`,icon:"☀️"},
-            {label:"Wind Capacity",value:`${best.w.toFixed(1)} MW`,icon:"🌬️"},
+            {label:"Solar Multiplier",value:`${best.s.toFixed(1)}×`,icon:"☀️"},
+            {label:"Wind Multiplier",value:`${best.w.toFixed(1)}×`,icon:"🌬️"},
             {label:"Baseload",value:`${best.b.toFixed(1)} MW`,icon:"⚡"},
             {label:"Deficit Energy Reduced",value:`${summaryStats.reductionPct.toFixed(1)} %`,icon:"📉"},
           ].map(item=>(

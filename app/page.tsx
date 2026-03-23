@@ -539,23 +539,23 @@ function WhatIfExplorer({ gridSamples, bestS, bestW, bestB }: { gridSamples: Gri
         {/* Solar slider */}
         <div>
           <div style={{display:"flex",justifyContent:"space-between",fontSize:11,fontWeight:700,letterSpacing:".08em",textTransform:"uppercase",color:"var(--text-muted)",marginBottom:8}}>
-            <span>☀️ Solar Capacity</span>
-            <span style={{color:"#22d3a5",fontFamily:"'JetBrains Mono',monospace"}}>{selS.toFixed(0)} MW</span>
+            <span>☀️ Solar Multiplier</span>
+            <span style={{color:"#22d3a5",fontFamily:"'JetBrains Mono',monospace"}}>{selS.toFixed(1)}×</span>
           </div>
           <input type="range" min={0} max={sValues.length-1} step={1} value={sIdx} onChange={e=>setSIdx(Number(e.target.value))} style={{width:"100%"}}/>
           <div style={{display:"flex",justifyContent:"space-between",fontSize:10,color:"var(--text-muted)",marginTop:4,fontFamily:"'JetBrains Mono',monospace"}}>
-            <span>{sValues[0]?.toFixed(0)} MW</span><span>{sValues[sValues.length-1]?.toFixed(0)} MW</span>
+            <span>{sValues[0]?.toFixed(1)}×</span><span>{sValues[sValues.length-1]?.toFixed(1)}×</span>
           </div>
         </div>
         {/* Wind slider */}
         <div>
           <div style={{display:"flex",justifyContent:"space-between",fontSize:11,fontWeight:700,letterSpacing:".08em",textTransform:"uppercase",color:"var(--text-muted)",marginBottom:8}}>
-            <span>🌬️ Wind Capacity</span>
-            <span style={{color:"#60a5fa",fontFamily:"'JetBrains Mono',monospace"}}>{selW.toFixed(0)} MW</span>
+            <span>🌬️ Wind Multiplier</span>
+            <span style={{color:"#60a5fa",fontFamily:"'JetBrains Mono',monospace"}}>{selW.toFixed(1)}×</span>
           </div>
           <input type="range" min={0} max={wValues.length-1} step={1} value={wIdx} onChange={e=>setWIdx(Number(e.target.value))} style={{width:"100%"}}/>
           <div style={{display:"flex",justifyContent:"space-between",fontSize:10,color:"var(--text-muted)",marginTop:4,fontFamily:"'JetBrains Mono',monospace"}}>
-            <span>{wValues[0]?.toFixed(0)} MW</span><span>{wValues[wValues.length-1]?.toFixed(0)} MW</span>
+            <span>{wValues[0]?.toFixed(1)}×</span><span>{wValues[wValues.length-1]?.toFixed(1)}×</span>
           </div>
         </div>
       </div>
